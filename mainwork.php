@@ -389,8 +389,8 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
 
         <!-- header -->
         <div class="dashboard-header">
-            <h1>Welcome back, <?= $user_name ?>! 👋</h1>
-            <p>Here's your study progress for today.</p>
+            <h1>Welcome, <?= $user_name ?>!</h1>
+            <p>Track your study progress for today.</p>
         </div>
 
         <!-- stats -->
@@ -424,8 +424,8 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
         <div class="card">
             <h4>Add New Task</h4>
             <div class="input-group">
-                <input type="text" id="subject-input" placeholder="Subject (e.g. Maths)">
-                <input type="text" id="task-input"    placeholder="Task (e.g. Chapter 3 exercises)">
+                <input type="text" id="subject-input" placeholder="Subject">
+                <input type="text" id="task-input"    placeholder="Task (e.g. chapter 4 homework)">
                 <button id="add-task-btn">+ Add Task</button>
             </div>
         </div>
@@ -436,7 +436,7 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
             <div id="loading-msg" class="loading-msg">Loading your tasks...</div>
             <div id="task-list"></div>
             <div id="empty-msg" class="empty-msg hidden">
-                No tasks yet. Start by adding one above! 📝
+                No tasks yet.
             </div>
         </div>
 
