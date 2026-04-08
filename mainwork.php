@@ -389,8 +389,8 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
 
         <!-- header -->
         <div class="dashboard-header">
-            <h1>Welcome, <?= $user_name ?>!</h1>
-            <p>Track your study progress for today.</p>
+            <h1>Welcome, <?= $user_name ?>.</h1>
+            <p>Track your study progress.</p>
         </div>
 
         <!-- stats -->
@@ -425,7 +425,7 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
             <h4>Add New Task</h4>
             <div class="input-group">
                 <input type="text" id="subject-input" placeholder="Subject">
-                <input type="text" id="task-input"    placeholder="Task (e.g. chapter 4 homework)">
+                <input type="text" id="task-input"    placeholder="e.g. chapter 4 homework">
                 <button id="add-task-btn">+ Add Task</button>
             </div>
         </div>
@@ -576,7 +576,7 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
             btn.textContent = '+ Add Task';
         });
 
-        // toggle task
+        // toggle taks
         async function toggleTask(id) {
             try {
                 const data = await api('toggle', { id });
@@ -585,7 +585,7 @@ $user_email = htmlspecialchars($_SESSION['user_email']);
                     renderTasks();
                 } else {
                     showToast(data.message, 'error');
-                    loadTasks(); // Refresh to sync state
+                    loadTasks();
                 }
             } catch (e) {
                 showToast('Failed to update task.', 'error');
